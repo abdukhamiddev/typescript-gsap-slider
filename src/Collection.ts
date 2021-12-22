@@ -85,7 +85,7 @@ class CollectionView extends InfiniteSlider {
      */
     private itemsShown(itemCount = constants.DEFAULT_ITEM_COUNT) {
         const { COLLECTION_ELEMENT_PADDING, COLLECTION_ELEMENT_WIDTH } = constants;
-        const calculatedWidth = (COLLECTION_ELEMENT_WIDTH + COLLECTION_ELEMENT_PADDING) * (itemCount > 3 ? constants.DEFAULT_ITEM_COUNT : itemCount);
+        const calculatedWidth = (COLLECTION_ELEMENT_WIDTH + COLLECTION_ELEMENT_PADDING) * (itemCount > 11 ? constants.DEFAULT_ITEM_COUNT : itemCount);
         this.elements.get('showcase').style.width = `${calculatedWidth}px`;
     }
 

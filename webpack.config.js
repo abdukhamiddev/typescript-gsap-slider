@@ -1,9 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: "./src/index.ts",
 	plugins: [
+		new MiniCssExtractPlugin(),
 		new HtmlWebpackPlugin({
 			template: "index.html",
 			minify: {
@@ -30,6 +32,10 @@ module.exports = {
 			{
 				test: /\.(svg)$/i,
 				type: "asset/source",
+			},
+			{
+				test: /\.(s(a|c)ss)$/,
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.m?js$/,

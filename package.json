@@ -19,6 +19,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.0",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
